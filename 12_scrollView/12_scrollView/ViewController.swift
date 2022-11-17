@@ -10,6 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var yellowBtn: UIButton!
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var deepBlueView: UIView!
+    @IBOutlet weak var deepBlueBtn: UIButton!
     @IBOutlet weak var redHeight0: NSLayoutConstraint!
     @IBOutlet weak var blueViewHeight: NSLayoutConstraint!
     @IBOutlet weak var blueBtn: UIButton!
@@ -29,27 +32,9 @@ class ViewController: UIViewController {
 
         NSLayoutConstraint.activate([btnLeading, btnLeadingY, btnWidth, btnHeight]);
 
-//        let cons: NSLayoutConstraint = NSLayoutConstraint.init(item: blueBtn!, attribute: .top, relatedBy: .equal, toItem: blueView, attribute: .top, multiplier: 1, constant: 200)
-//        cons.isActive = true
-//        blueView.addConstraint(cons)
-//
-//        let cons2: NSLayoutConstraint = NSLayoutConstraint.init(item: blueBtn!, attribute: .bottom, relatedBy: .equal, toItem: blueView, attribute: .bottom, multiplier: 1, constant: 200)
-//        cons2.isActive = true
-//        blueView.addConstraint(cons2)
-//
-//        let cons3: NSLayoutConstraint = NSLayoutConstraint.init(item: blueBtn!, attribute: .leading, relatedBy: .equal, toItem: blueView, attribute: .leading, multiplier: 1, constant: 200)
-//        cons3.isActive = true
-//        blueView.addConstraint(cons3)
-//
-//        let cons4: NSLayoutConstraint = NSLayoutConstraint.init(item: blueBtn!, attribute: .trailing, relatedBy: .equal, toItem: blueView, attribute: .trailing, multiplier: 1, constant: 200)
-//        cons4.isActive = true
-//        blueView.addConstraint(cons4)
         
         blueBtn.backgroundColor = UIColor.red
-//        blueBtn.constraints.forEach { cons in
-//            print("======")
-//            print(cons)
-//        }
+
         blueView.constraints.forEach { cons in
             print("======");
             print(cons);
@@ -59,9 +44,19 @@ class ViewController: UIViewController {
         btn1.setTitle("哈哈哈", for: UIControl.State.normal);
         blueView.addSubview(btn1);
         btn1.backgroundColor = UIColor.blue;
+        
+        deepBlueBtn.addTarget(self, action: #selector(deepBlueBtnClick), for: UIControl.Event.touchUpInside)
     }
     @objc func zero () {
         redHeight0.priority = redHeight0.priority.rawValue < 201 ? UILayoutPriority(rawValue: 1000.0) : UILayoutPriority(rawValue: 200.0)
+    }
+    @objc func deepBlueBtnClick() {
+//        print(deepBlueBtn.constraints)
+//        print(deepBlueBtn.frame)
+//        scrollView.scroll
+        print(deepBlueBtn.layer.frame)
+        print(deepBlueBtn.layer.bounds)
+        print(deepBlueView.frame.origin.y)
     }
 }
 
