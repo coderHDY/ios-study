@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,18 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="E7n-Zb-c74">
+                                <rect key="frame" x="172.5" y="437.5" width="69.5" height="31"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <rect key="contentStretch" x="0.5" y="0.40000000000000002" width="1" height="1"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                <size key="titleShadowOffset" width="10" height="7"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50j-bN-5PL">
+                                <rect key="frame" x="173.5" y="217" width="67" height="67"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <string key="text">hello
+world</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E7n-Zb-c74" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="12W-TV-GzD"/>
+                            <constraint firstItem="E7n-Zb-c74" firstAttribute="top" secondItem="50j-bN-5PL" secondAttribute="bottom" constant="153.5" id="2J0-yI-rOC"/>
+                            <constraint firstItem="50j-bN-5PL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BVj-Eu-ecP"/>
+                            <constraint firstItem="E7n-Zb-c74" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TqN-O2-5lZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btn" destination="E7n-Zb-c74" id="76P-PZ-mpK"/>
+                        <outlet property="textLabel" destination="50j-bN-5PL" id="xNv-yH-AKt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="92"/>
+            <point key="canvasLocation" x="18.840579710144929" y="91.741071428571431"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
