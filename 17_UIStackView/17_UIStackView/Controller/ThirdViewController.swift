@@ -15,7 +15,10 @@ class ThirdViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onDismiss() {
+        dismiss(animated: true);
+    }
+    
     /*
     // MARK: - Navigation
 

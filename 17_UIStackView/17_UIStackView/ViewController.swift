@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     @IBAction func openThirdPage(_ sender: UIButton) {
         let ThirdController = storyboard!.instantiateViewController(withIdentifier: "ThirdView")
-        ThirdController.modalPresentationStyle = .fullScreen;
+//        ThirdController.modalPresentationStyle = .fullScreen;
         present(ThirdController, animated: true, completion: nil)
     }
 }

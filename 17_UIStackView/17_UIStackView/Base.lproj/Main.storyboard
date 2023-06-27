@@ -145,21 +145,24 @@
         <!--Third View Controller-->
         <scene sceneID="R7z-5w-l6b">
             <objects>
-                <viewController storyboardIdentifier="ThirdView" id="iPZ-tm-ckG" customClass="ThirdViewController" customModule="_7_UIStackView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThirdView" wantsFullScreenLayout="YES" id="iPZ-tm-ckG" customClass="ThirdViewController" customModule="_7_UIStackView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tC8-A5-ETZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是第三个界面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBf-io-4NL">
-                                <rect key="frame" x="146" y="109" width="122" height="21"/>
+                                <rect key="frame" x="146" y="65" width="122" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTQ-dA-Oja">
-                                <rect key="frame" x="180.5" y="437.5" width="53" height="31"/>
+                                <rect key="frame" x="180.5" y="371.5" width="53" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="关闭"/>
+                                <connections>
+                                    <action selector="onDismiss" destination="iPZ-tm-ckG" eventType="touchUpInside" id="2L0-Ce-cZW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0L6-nf-RXa"/>
@@ -171,6 +174,8 @@
                             <constraint firstItem="lBf-io-4NL" firstAttribute="centerX" secondItem="0L6-nf-RXa" secondAttribute="centerX" id="jCJ-Ip-eT0"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4T-8G-4aD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
