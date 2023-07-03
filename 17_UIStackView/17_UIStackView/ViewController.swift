@@ -9,7 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var btn2: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var hiddenBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,15 @@ class ViewController: UIViewController {
         let ThirdController = storyboard!.instantiateViewController(withIdentifier: "ThirdView")
 //        ThirdController.modalPresentationStyle = .fullScreen;
         present(ThirdController, animated: true, completion: nil)
+    }
+    @IBAction func shwTextFieldText(_ sender: UIButton) {
+        textField1.placeholder = "1111111"
+        if !textField1.text!.isEmpty {
+            print(textField1.text!)
+        }
+    }
+    @IBAction func showImage(_ sender: Any) {
+        imageView.image = UIImage(named: "Univercity")
     }
 }
 
